@@ -50,6 +50,7 @@ The application is bundled by [Rollup](https://rollupjs.org/) (see the `rollup.c
 how your application sources will be outputed. By default, it comes with a CommonJS compatible module (mainly for Node)
 or a ES module compatible source. It uses the `module` and `main` field in the **package.json** so the one that consume
 your application / library use the correct version based on the platform used.
+The `types` field is also used to correctly picks TypeScript definitions.
 
 ## Tooling
 
