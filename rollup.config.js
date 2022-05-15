@@ -1,7 +1,7 @@
 import pkg from './package.json'
 import replace from '@rollup/plugin-replace'
 import resolve from '@rollup/plugin-node-resolve'
-import ts from '@wessberg/rollup-plugin-ts'
+import ts from 'rollup-plugin-ts'
 import { eslint } from 'rollup-plugin-eslint'
 import commonjs from '@rollup/plugin-commonjs'
 import { terser } from 'rollup-plugin-terser'
@@ -21,12 +21,12 @@ const config = {
   input: ['src/index.ts'],
   output: [
     {
-      file: pkg.main,
+      file: pkg.exports.require,
       format: 'cjs',
       sourcemap: true,
     },
     {
-      file: pkg.module,
+      file: pkg.exports.import,
       format: 'esm',
       sourcemap: true,
     },
